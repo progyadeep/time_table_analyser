@@ -3,7 +3,7 @@ import numpy as np
 
 slot_state = np.ones((14,13))
 cd = [0,0]
-tt = Image.open("tt_kiran.jpg")
+tt = Image.open("tt_example.jpg")
 
 dim = tt.size
 
