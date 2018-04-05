@@ -1,5 +1,5 @@
 # Time table analyser
-An image processing program that will analyse your VIT time table and show the free and filled slots.
+An image processing program that will analyse your VIT time table and show the free and filled <b>time</b> slots in the time table.
 
 # Language
 Python
