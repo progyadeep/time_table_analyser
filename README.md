@@ -8,6 +8,9 @@ Python
 3+  
 The <b>print</b> statement of Python2 was replaced with the <b>print()</b> function in Python3, which is what is used in this code.
 
+# Documentation
+The complete documentation is available in this repository: <a href="https://github.com/progyadeep/time_table_analyser/blob/master/DOCUMENTATION.md">DOCUMENTATION.md</a>
+
 # Dependencies
 <ul>
   <li>numpy</li>  
