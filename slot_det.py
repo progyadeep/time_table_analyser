@@ -3,9 +3,8 @@ import numpy as np
 
 slot_state = np.ones((14,13))
 cd = [0,0]
-tt = Image.open("tt.jpg")
-#tt = tt.convert('RGB') #this line is required when this program is fed with an image that has ONLY web safe colours
-                        #WEB SAFE COLOURS =/= PURE RGB
+tt = Image.open("tt_kiran.jpg")
+
 dim = tt.size
 
 def isBlack(rgb):
@@ -14,17 +13,10 @@ def isBlack(rgb):
     return False
 
 
-def isVCP(tup):
-    x = tup[0] - 100 #100 is the mean of all the RED values for all the VCPs
-    y = tup[1] - 139 #139 is the mean of all the GREEN values...
-    z = tup[2] - 84  #84 is the mean of all the BLUE values...
-
-    if abs(x) > 5 or abs(y) > 7:
-        return False
-    if (z < 0 and abs(z) > 18) or (z > 0 and abs(z) > 29):
-        return False
-
-    return True
+def isVCP(t):
+    if t[0] < 150 and t[1] > 100 and t[1] < 200 and t[2] < 150:
+        return True
+    return False
 
 
 def updateNPCoord():
@@ -71,13 +63,14 @@ for b in range(14):
             break
 
         i = i + 1
-        while not isBlack(tt.getpixel((i,j))):
+        while not isBlack(tt.getpixel((i,j))) and not isVCP(tt.getpixel((i,j))):
             i = i + 1
         while tt.getpixel((i,j)) not in cols:
             i = i + 1
 
     if b == 13:
         break
+
 
     i = start[0]
     j = j + 1
@@ -86,18 +79,11 @@ for b in range(14):
     while tt.getpixel((i,j)) not in cols:
         j = j + 1
 
-merged_slots = np.ones((7,13))
 a = 0
-
-while a <= 12:
+while a < 13:
     b = 0
-    while b != 13:
-        merged_slots[a//2,b] = slot_state[a,b] + slot_state[a+1,b]
+    while b < 13:
+        print(int(slot_state[a,b] + slot_state[a+1, b]), end="  ")
         b = b + 1
-
     a = a + 2
-
-for a in range(7):
-    for b in range(13):
-        print(int(merged_slots[a,b]), end="  ")
     print("\n")
