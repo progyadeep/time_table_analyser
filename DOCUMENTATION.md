@@ -41,6 +41,6 @@ This is a documentation of the program.
   </tr>
   
   <tr>
-    <td>start</td> <td>Python list</td> <td>This is a list of size two that holds the [i,j] coordinates of the first <i>significant</i> pixel inside the first slot cell (i.e., A1) in the time table. <i>[A significant pixel is one which is either of the three colours defined by the RGB values stored in <b>cols</b>.]</i></td>
+    <td>start</td> <td>Python list</td> <td>This is a list of size 2 that holds the [i,j] coordinates of the first <i>significant</i> pixel inside the first slot cell (i.e., A1) in the time table. <i>[A significant pixel is one which is either of the three colours defined by the RGB values stored in <b>cols</b>.]</i></td>
   </tr>
 </table>
