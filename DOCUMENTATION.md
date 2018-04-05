@@ -1,3 +1,4 @@
+# Documentation
 This is a documentation of the program.  
 
 <hr/>
