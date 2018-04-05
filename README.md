@@ -18,4 +18,6 @@ The complete documentation is available in this repository: <a href="https://git
 </ul>
 
 # Limitations
-The input image should be a proper screenshot (taken on laptop, <b>not phone</b>), and <b>the entire time table should be present inside the picture</b>. Incomplete screenshots will lead to an <b>image index out of bounds</b> error.
+The input image should be a proper screenshot (taken on laptop, <b>not phone</b>), and <b>the entire time table should be present inside the picture</b>. Incomplete screenshots will lead to an <b>image index out of bounds</b> error.  
+
+See this <a href="https://github.com/progyadeep/time_table_analyser/blob/master/example_timetable.jpg">example timetable</a> for your reference.
