@@ -37,7 +37,7 @@ This is a documentation of the program.
   </tr>
   
   <tr>
-    <td>cols</td> <td>Python tuplet</td> <td>This is a tuplet that holds 3 tuplets. The inner tuplets hold the RGB values of the green, yellow and light brown colour that is used to highlight slots in the VIT time table.</td>
+    <td>cols</td> <td>Python tuplet</td> <td>This is a tuplet that holds 3 tuplets. The inner tuplets hold the RGB values of the <u>green</u>, <u>yellow</u> and <u>light brown</u> colour that are used to highlight slots in the VIT time table.</td>
   </tr>
   
   <tr>
