@@ -13,7 +13,7 @@ This is a documentation of the program.
   </tr>
   
   <tr>
-    <td>cd</td> <td>Python list</td> <td>This is a list of size 2 that holds the [i,j] coordinates of the <i>next</i> slot in the <i>slot_state</i> array.</td>
+    <td>cd</td> <td>Python list</td> <td>This is a list of size 2 that holds the [i,j] coordinates of the <i>next</i> slot in the <i>slot_state</i> array that is to be manipulated.</td>
   </tr>
   
   <tr>
