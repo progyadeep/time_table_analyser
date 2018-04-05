@@ -25,11 +25,11 @@ This is a documentation of the program.
   </tr>
   
   <tr>
-    <td>isBlack(rgb)</td> <td>Python function</td> <td>Determines whether the pixel, whose RGB values are stored in its argument, is a (seemingly) black pixel or not.</td>
+    <td>isBlack(rgb)</td> <td>Python function</td> <td>Determines whether the pixel, whose RGB values are passed as its argument, is a (seemingly) black pixel or not.</td>
   </tr>
   
   <tr>
-    <td>isVCP(rgb)</td> <td>Python function</td> <td>Determines whether the pixel, whose RGB values are stored in its argument, is a horizontal line (that separates two adjacent slot cells in the time table) or not.</td>
+    <td>isVCP(rgb)</td> <td>Python function</td> <td>Determines whether the pixel, whose RGB values are passed as its argument, is a horizontal line (that separates two adjacent slot cells in the time table) or not.</td>
   </tr>
   
   <tr>
