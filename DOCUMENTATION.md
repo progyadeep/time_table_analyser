@@ -32,7 +32,7 @@ Version 1.0
   </tr>
   
   <tr>
-  <td>updateNPCoord()</td> <td>Python function</td> <td>Updates the values of <b>cd</b> to hold the coordinates if the next slot to be evaluated in<b>slot_state</b></td>
+  <td>updateNPCoord()</td> <td>Python function</td> <td>Updates the values of <b>cd</b> to hold the coordinates of the next slot to be evaluated in <b>slot_state</b></td>
   </tr>
   
   <tr>
@@ -40,6 +40,6 @@ Version 1.0
   </tr>
   
   <tr>
-    <td>start</td> <td>Python list</td> <td>Holds the [i,j] coordinates of the first significant pixel inside the cell of <b>A1</b> slot in the timetable image. <b>NOTE:</b> <i>A significant pixel is one which is exactly of one of the three standard green/yellow/light brown colours used to highlight slots in the time table.</i>.</td>
+    <td>start</td> <td>Python list</td> <td>Holds the [i,j] coordinates of the first significant pixel inside the cell of the first <b>A1</b> slot <i>(Monday's 8 'o' clock class slot)</i> in the timetable image. <b>NOTE:</b> <i>A significant pixel is one which is exactly of one of the three standard green/yellow/light brown colours used to highlight slots in the time table.</i>.</td>
   </tr>
 </table>
