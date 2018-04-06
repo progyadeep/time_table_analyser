@@ -5,7 +5,7 @@ This is a simple program written in <b>Python <i>(3.x.x)</i></b> that takes in a
 # Dependencies
 <ul>
   <li> <a href="http://numpy.org" target="_blank">Numpy</a></li>
-  <li> Pyhton 3+</li>
+  <li> Python 3+</li>
   <li> PIL.Image</li>
 </ul>
 
