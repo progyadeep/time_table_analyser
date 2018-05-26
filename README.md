@@ -17,3 +17,7 @@ This is a simple program written in <b>Python <i>(3.x.x)</i></b> that takes in a
   <br/>
   <li> The image should show all the slots. Do not upload an incomplete time table image. <strong>SEE THE FILES "best_tt.jpg" and "ok_tt.jpg" TO GET AN IDEA ABOUT SUITABLE IMAGES</strong>.</li>
 </ul>
+
+# Version log
+v1.2 (26th May, 2018)
+v1.1 (Original release)
