@@ -1,9 +1,9 @@
 from PIL import Image
 import numpy as np
 
-slot_state = np.ones((14,13))
+slot_state = np.zeros((14,13))
 cd = [0,0]
-tt = Image.open("tt_example.jpg")
+tt = Image.open("deadlock_tt.jpg")
 
 dim = tt.size
 
@@ -49,35 +49,46 @@ j = start[1]
 i = start[0]
 
 
-for b in range(14):
+try:
+	for b in range(14):
+	
+		for a in range(13):
+			if tt.getpixel((i,j)) == cols[0]:
+				slot_state[cd[0], cd[1]] = 1
+			else:
+				slot_state[cd[0], cd[1]] = 0
 
-    for a in range(13):
-        if tt.getpixel((i,j)) == cols[0]:
-            slot_state[cd[0], cd[1]] = 1
-        else:
-            slot_state[cd[0], cd[1]] = 0
+			updateNPCoord()
 
-        updateNPCoord()
+			if a == 12:
+				break
 
-        if a == 12:
-            break
+			i = i + 1
+			while not isBlack(tt.getpixel((i,j))) and not isVCP(tt.getpixel((i,j))):
+				i = i + 1
+			while tt.getpixel((i,j)) not in cols:
+				i = i + 1
 
-        i = i + 1
-        while not isBlack(tt.getpixel((i,j))) and not isVCP(tt.getpixel((i,j))):
-            i = i + 1
-        while tt.getpixel((i,j)) not in cols:
-            i = i + 1
+    	#printing
+    	#for x in range(13):
+    	#    print(int(slot_state[b][a]), end=' ')
+    	#print('\n')
 
-    if b == 13:
-        break
+		if b == 13:
+			break
 
 
-    i = start[0]
-    j = j + 1
-    while not isVCP(tt.getpixel((i,j))):
-        j = j + 1
-    while tt.getpixel((i,j)) not in cols:
-        j = j + 1
+		i = start[0]
+		j = j + 1
+		while not isVCP(tt.getpixel((i,j))):
+			j = j + 1
+		while tt.getpixel((i,j)) not in cols:
+			j = j + 1
+
+except IndexError:
+	if cd[0] < 9:
+		print("BAD FILE: Please upload a proper time table image.")
+		exit()
 
 a = 0
 while a < 13:
