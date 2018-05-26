@@ -19,5 +19,5 @@ This is a simple program written in <b>Python <i>(3.x.x)</i></b> that takes in a
 </ul>
 
 # Version log
-v1.2 (26th May, 2018)
+v1.2 (26th May, 2018)<br/>
 v1.1 (Original release)
