@@ -1,7 +1,3 @@
-'''
-THIS CODE SIMPLY PRINTS A 1D JSON ARRAY INSTEAD OF THE 2D ARRAY THAT THE ORIGINAL CODE SHOWED.
-'''
-
 from PIL import Image
 import json
 import numpy as np
@@ -13,16 +9,24 @@ tt = Image.open("tt_shreyash.jpg")
 
 dim = tt.size
 
+
+def isLine(t):
+	return t[0] < 200 and t[1] < 200 and t[2] < 200
+	
+
 def isBlack(rgb):
-    if rgb[0] < 100 and rgb[1] < 100 and rgb[2] < 100:
+    '''if rgb[0] < 100 and rgb[1] < 100 and rgb[2] < 100:
         return True
-    return False
+    return False'''
+    return isLine(rgb)
 
 
 def isVCP(t):
-    if t[0] < 150 and t[1] > 100 and t[1] < 200 and t[2] < 150:
+    '''if t[0] < 150 and t[1] > 100 and t[1] < 200 and t[2] < 150:
         return True
-    return False
+    return False'''
+    return isLine(t)
+
 
 
 def updateNPCoord():
