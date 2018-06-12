@@ -12,7 +12,9 @@ As of 12th June, 2018, the program takes in a PNG image of a VITian's time table
 
 <b>The image must contain all the slots completely. You need not include the entire time table image: only the part showing your filled slots may be included. BUT, all the boxes (cells) of the time table, starting from MONDAY 08:00 till your last class should be enclosed entirely, i.e., the individual green boxes that show your slots should not be cropped.<br/><br/>
 
-See the file "minimum.png". This file shows the minimum information needed in the image. THE FILE SHOWS CLASSES FROM MONDAY TO FRIDAY.</b>
+See the file "minimum.png". This file shows the minimum information needed in the image. THE FILE SHOWS CLASSES FROM MONDAY TO FRIDAY.<br/><br/>
+
+A time table that does not contain the black demarcation lines (like the file "dead_tt.jpg") won't be accepted.</b>
 
 ## OUTPUT
 A one-dimensional JSON array containing all slots' info for all days of the week, one after the other.
