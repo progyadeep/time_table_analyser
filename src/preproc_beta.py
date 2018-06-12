@@ -2,9 +2,7 @@ from PIL import Image
 
 im = Image.open(input("Enter file path: "))
 
-print("Preprocessing image\n-------------------")
 #preprocessing 1
-print("Sharpening (stage 1 of 3)...");
 
 d = im.size
 out = Image.new('RGB', d, (255,255,255))
@@ -21,7 +19,6 @@ out.save("ttpxt.png")
 
 
 #preprocessing 2
-print("Monotonizing (stage 2 of 3)...")
 
 im = Image.open("ttpxt.png")
 
@@ -42,7 +39,6 @@ for a in range(d[0]):
 out.save("ttpxt.png")
 
 #preprocessing 3 (monotonizing 2)
-print("Finishing monotonizing (stage 3 of 3)...")
 
 im = Image.open("ttpxt.png")
 out = im
@@ -60,4 +56,3 @@ for a in range(d[0]):
 				out.putpixel((a,b), (255,255,0))
 
 out.rotate(180).save("ttpxt.png")
-print("Preprocessing complete\n")
