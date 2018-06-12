@@ -24,14 +24,6 @@ Version 1.0
   </tr>
   
   <tr>
-    <td>isBlack(rgb)</td> <td>Python function</td> <td>Determines whether the pixel, whose RGB values are passed in a <b>tuplet</b> as argument to this function, is a (seemingly) black pixel or not.</td>
-  </tr>
-  
-  <tr>
-    <td>isVCP(rgb)</td> <td>Python function</td> <td>Determines whether the pixel, whose RGB values are passed in a tuplet as argument to this function, is part of a horizontal line that divides the cells in the time table as you move down.</td>
-  </tr>
-  
-  <tr>
   <td>updateNPCoord()</td> <td>Python function</td> <td>Updates the values of <b>cd</b> to hold the coordinates of the next slot to be evaluated in <b>slot_state</b></td>
   </tr>
   
