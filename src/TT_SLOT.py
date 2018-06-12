@@ -11,8 +11,6 @@ cd = [0,0]
 #file_name = input("Enter file path: ");
 tt = Image.open("ttpxt.png")
 
-print("Analysing image...")
-
 dim = tt.size
 
 def updateNPCoord():
@@ -82,9 +80,19 @@ try:
 			j = j + 1
 
 except IndexError:
-	if cd[0] < 9:
+	if cd[0] < 10 or cd[1] != 0:
 		print("BAD FILE: Please upload a proper time table image.")
 		exit()
+
+##in case of a correctly cropped image, empty rows need be added to the top
+##of the table, before rotation
+for x in range(14 - cd[0]):
+    tr = np.zeros(13)
+    i = 13
+    while i >= 1:
+        slot_state[i] = slot_state[i-1]
+        i = i - 1
+    slot_state[0] = tr
 
 ##rotating the array
 slot_state = np.rot90(slot_state, 2, (0,1))
@@ -98,6 +106,6 @@ while a < 13:
     a = a + 2
 
 os.remove("ttpxt.png")
-print("\nAnalysis complete.\n\n"+json.dumps(final_list))
+print(json.dumps(final_list))
 x = input("\nGive any input to continue...")
 exit()
