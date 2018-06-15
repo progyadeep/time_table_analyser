@@ -13,15 +13,15 @@ for i in range(d[0]):
 		p = im.getpixel((i,j))
 		if p[0] <= 200 and p[1] <= 200 and p[2] <= 200: #preprocessing 1
 			out.putpixel((i,j), (0,0,0))
-		elif rgb[1] > 200 and rgb[2] > 200 and rgb[2] >= rgb[1]: #preprocessing 2
-			out.putpixel((a,b), (0,0,200))
+		elif p[1] > 200 and p[2] > 200 and p[2] >= p[1]: #preprocessing 2
+			out.putpixel((i,j), (0,0,200))
 		else: #preprocessing 3 (monotonizing 2)
-			dg = dist((203,254,51), rgb)
-			dy = dist((255,255,204), rgb)
+			dg = dist((203,254,51), p)
+			dy = dist((255,255,204), p)
 			if dg < dy:
-				out.putpixel((a,b), (0,255,0))
+				out.putpixel((i,j), (0,255,0))
 			else:
-				out.putpixel((a,b), (255,255,0))
+				out.putpixel((i,j), (255,255,0))
 
 
 out.rotate(180).save("ttpxt.png")
