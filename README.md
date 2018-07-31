@@ -29,3 +29,6 @@ The first 13 values of the JSON array are the time slot values for Monday, the n
 
 ## CONSTRAINTS
 It can only work upon PNG files right now. It can take in JPG/JPEG files too but there's a high possibility of errors, as there's no fixed compression threshold for JPG/JPEG files and the pixel values vary largely.
+
+## DOCUMENTATION
+A detailed documentation can be found in the <a href="https://github.com/progyadeep/time_table_analyser/blob/master/DOCUMENTATION.md">DOCUMENTATION.md</a> file <b>in this repository</b>.
