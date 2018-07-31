@@ -2,13 +2,16 @@
 
 This is a program that analyses the image of a VITian's time table and determines the filled and free slots of the week. It's writen in Python 3.
 
+## UPDATE
+Previously, the MxN array was being iterated MxN times (all cells). That has been omitted. A calculative iteration now results in reduced execution time. <b>[31st July, 2018]</b>
+
 ## DEPENDENCIES
 > Numpy<br/>
 > PIL<br/>
 > json
 
 ## INPUT
-As of 12th June, 2018, the program takes in a PNG image of a VITian's time table.<br/><br/>
+As of 31tst July, 2018, the program takes in a <b>PNG</b> image of a VITian's time table.<br/><br/>
 
 <b>The image must contain all the slots completely. You need not include the entire time table image: only the part showing your filled slots may be included. BUT, all the boxes (cells) of the time table, starting from MONDAY 08:00 till your last class should be enclosed entirely, i.e., the individual green boxes that show your slots should not be cropped.<br/><br/>
 
