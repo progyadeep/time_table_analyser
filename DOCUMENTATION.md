@@ -12,6 +12,10 @@ Version 1.0
   </tr>
   
   <tr>
+  <td>hops</td> <td>Python list</td> <td>A list that stores the gap, i.e., how many pixels to skip, between consecutive horizontal cells (slots).</td>
+  </tr>
+  
+  <tr>
     <td>cd</td> <td>Python list</td> <td>Stores the [i,j] coordinates of the slot in <b>slot_state</b> that is to be evaluated currently.</td>
   </tr>
   
